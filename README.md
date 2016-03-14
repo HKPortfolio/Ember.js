@@ -1,2 +1,2 @@
 # EmberJS
-GUI using HTML, CSS, JavaScript and CoffeeScript with Ember.js
+GUI using HTML, CSS, JavaScript with Ember.js
