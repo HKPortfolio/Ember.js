@@ -1,10 +1,1 @@
-<h3 id="subtitle">Posts</h3>
-
-<ul>
-    {{#each model as |post|}}
-        <li>
-            <h4 id="post-title{{post.id}}">{{post.title}}</h4>
-            {{post.message}}
-        </li>
-    {{/each}}
-</ul>
+{{post-list title="Posts" posts=model}}
