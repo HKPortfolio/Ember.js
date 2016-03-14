@@ -1,3 +1,8 @@
 <h4 id="post-title{{item.id}}">{{item.title}}</h4>
 
-{{item.message}}
+{{#if isMessageShowing}}
+    <p>{{item.message}}</p>
+    <button {{action "messageHide"}}>Click here to hide the message.</button>
+{{else}}
+    <button {{action "messageShow"}}>Click here to show the message.</button>
+{{/if}}
