@@ -1,9 +1,14 @@
-<h4 id="post-title{{item.id}}">{{item.title}}</h4>
-
-{{#if isMessageShowing}}
-    <p id="post-message{{item.id}}">{{item.message}}</p>
-    <button {{action "messageHide"}}>Less</button>
-{{else}}
-    <p id="post-message{{item.id}}">{{summarise item.message}}</p>
-    <button {{action "messageShow"}}>More</button>
-{{/if}}
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <span id="post-title{{item.id}}">{{item.title}}</span>
+    </div>
+    <div class="panel-body">
+        {{#if isMessageShowing}}
+            <p id="post-message{{item.id}}">{{replace-new-lines item.message}}</p>
+            <a {{action "messageHide"}}>Show Less</a>
+        {{else}}
+            <p id="post-message{{item.id}}">{{shorten-and-replace-new-lines item.message}}</p>
+            <a {{action "messageShow"}}>Show More</a>
+        {{/if}}
+    </div>
+</div>

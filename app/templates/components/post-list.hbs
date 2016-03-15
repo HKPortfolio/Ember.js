@@ -1,7 +1,10 @@
-<h3 id="subtitle">{{title}}</h3>
-
-<ul>
-    {{#each list as |item|}}
-        <li>{{post-item item=item}}</li>
-    {{/each}}
-</ul>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <span id="subtitle">{{title}}</span>
+    </div>
+    <div class="panel-body">
+        {{#each list as |item|}}
+            {{post-item item=item}}
+        {{/each}}
+    </div>
+</div>
